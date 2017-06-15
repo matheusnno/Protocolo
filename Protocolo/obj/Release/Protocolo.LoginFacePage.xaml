@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="Protocolo.LoginFacePage"
+			 xmlns:local="clr-namespace:Protocolo" 
+			 Title="Login com Facebook">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Sobre" Command="{Binding Sobre}" />
+	</ContentPage.ToolbarItems>
+	<StackLayout>
+		<Button Text="Logar com o Facebook!" Command="{Binding FaceCommand}"/>
+	</StackLayout>
+	
+</ContentPage>

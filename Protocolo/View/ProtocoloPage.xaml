@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Protocolo.ProtocoloPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Protocolo" 
+	  		 Title="Lista de Itens" >
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Padding="0,20,0,0">
+        <Entry Text="{Binding Nome}" />
+        <ListView 
+        HasUnevenRows="true"
+            SeparatorVisibility="None"
+            ItemSelected="Handle_ItemSelected"
+            ItemsSource="{Binding Results}" >
+        	<ListView.ItemTemplate>
+        		<DataTemplate>
+        			<TextCell Text="{Binding Nome}" Detail="{Binding Url}"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+        <Button Command="{Binding NomeCommand}" Text="Pesquisar Perfis Salvos" />
+    </StackLayout>
+
+</ContentPage>

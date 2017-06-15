@@ -1,0 +1,6 @@
+namespace Protocolo
+{
+	class AzureService
+	{
+	}
+}
